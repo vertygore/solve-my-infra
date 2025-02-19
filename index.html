@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="icon" type="image/svg+xml" href="/images/icon.svg" />
     <link rel="apple-touch-icon" href="/images/icon.png" />
     <title>SolveMyInfra UG</title>
@@ -15,8 +19,8 @@
         <a class="active" href="/index.html">Start</a>
         <a href="#whyus">Warum wir?</a>
         <a href="#customer">Rezensionen</a>
-        <a href="#bottom">Fragen?</a>
-        <a class="book" href="#bookbtn">Buchen!</a>
+        <a href="#faq-section">Fragen?</a>
+        <a class="book" href="#book">Buchen!</a>
       </div>
     </header>
 
@@ -101,64 +105,76 @@
         </div>
       </section>
 
+      <section class="customer">
+        <div class="ratings">
+          <div class="r1">
+            <div class="rating-text">moin</div>
+            <div class="fa fa-star"></div>
+            <div class="fa fa-star"></div>
+            <div class="fa fa-star"></div>
+            <div class="fa fa-star"></div>
+            <div class="fa fa-star"></div>
+          </div>
+        </div>
+      </section>
+
       <section id="faq-section">
         <h1>Häufig gestellte Fragen</h1>
-      <div class="faq">
-        <button class="accordion">
-          Wie lange dauert es von Anfrage bis zur Fertigstellung?
-        </button>
-        <div class="panel">
-          <p>
-            Wenn der Antrag einmal bearbeitet ist, erfolgt eine komplette
-            Fertigstellung meist innerhalb weniger Wochen.
-          </p>
+        <div class="faq">
+          <button class="accordion">
+            Wie lange dauert es von Anfrage bis zur Fertigstellung?
+          </button>
+          <div class="panel">
+            <p>
+              Wenn der Antrag einmal bearbeitet ist, erfolgt eine komplette
+              Fertigstellung meist innerhalb weniger Wochen.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="faq">
-        <button class="accordion">
-          Wie viel kostet ein Auftrag?
-        </button>
-        <div class="panel">
-          <p>
-            Das ist sehr individuell, je nach Größe und Anforderungen. Daher können wir leider keine allgemeine Einschätzung geben.
-          </p>
+        <div class="faq">
+          <button class="accordion">Wie viel kostet ein Auftrag?</button>
+          <div class="panel">
+            <p>
+              Das ist sehr individuell, je nach Größe und Anforderungen. Daher
+              können wir leider keine allgemeine Einschätzung geben.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="faq">
-        <button class="accordion">
-          Können speziellere Anforderungen gestellt werden?
-        </button>
-        <div class="panel">
-          <p>
-            Wir sind für eure Problemlöser für jede Art von Anforderung. Nach Absprache werden wir so gut wie möglich eurem Anspruch gerecht!
-          </p>
+        <div class="faq">
+          <button class="accordion">
+            Können speziellere Anforderungen gestellt werden?
+          </button>
+          <div class="panel">
+            <p>
+              Wir sind für eure Problemlöser für jede Art von Anforderung. Nach
+              Absprache werden wir so gut wie möglich eurem Anspruch gerecht!
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="faq">
-        <button class="accordion">
-          Wie kann man eine Anfrage an euch senden?
-        </button>
-        <div class="panel">
-          <p>
-            Eine Anfrage erfolgt bei uns über unser Kontaktformular! Optional können Sie auch eine E-Mail schreiben oder uns anrufen. Mehr dazu finden Sie <a href="#book">hier.</a>
-          </p>
+        <div class="faq">
+          <button class="accordion">
+            Wie kann man eine Anfrage an euch senden?
+          </button>
+          <div class="panel">
+            <p>
+              Eine Anfrage erfolgt bei uns über unser Kontaktformular! Optional
+              können Sie auch eine E-Mail schreiben oder uns anrufen. Mehr dazu
+              finden Sie <a href="#book">hier.</a>
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="faq">
-        <button class="accordion">
-          Wie lange werden eure Produkte noch im Nachhinein von euch gewartet?
-        </button>
-        <div class="panel">
-          <p>
-            Sie bekommen Wartungen nach Wunsch, bis sie zufrieden sind!
-          </p>
+        <div class="faq">
+          <button class="accordion">
+            Wie lange werden eure Produkte noch im Nachhinein von euch gewartet?
+          </button>
+          <div class="panel">
+            <p>Sie bekommen Wartungen nach Wunsch, bis sie zufrieden sind!</p>
+          </div>
         </div>
-      </div>
-
       </section>
 
       <section id="book">
@@ -172,7 +188,6 @@
       </section>
     </main>
 
-
     <footer id="bottom">
       <div class="impressum">
         <strong>Impressum:</strong><br />
@@ -185,7 +200,14 @@
         Tel.: 0611 - 31 52 10<br />
         E-Mail: service@solvemyinfra.de
       </div>
+
     </footer>
+    <section id="sourceslist">
+      <div class="sourceslist">
+        <a href="https://www.pexels.com/">Bildquellen by Pexels.com</a>
+      </div>
+    </section>
+    
   </body>
   <script src="js/faq.js"></script>
 </html>
