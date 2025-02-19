@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+@property --dust {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #bcbcbc;
+}
+
+@property --blank-white {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #f7f7f7;
+}
+
+@property --horizon-blue {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #82bfe9;
+}
+
+@property --light-horizon-blue {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #abd9f7;
+}
+
+@property --black-olive {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #13171b;
+}
+
+@property --goshawk-black {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #444444;
+}
+
+@property --french-blue {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0a71c1;
+}
+
+/* Zurücksetzen von Standard-Border des Browsers */
+* {
+  color: var(--goshawk-black);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Logo Formatierung */
+.logo {
+  background-color: var(--light-horizon-blue);
+  padding-top: 1vw;
+  float: right;
+  padding-right: 27vw;
+}
+
+.logo img{
+  position: absolute;
+  max-width: 25%;
+}
+
+/* Formatierung Navigation-Bar */
+.topnav {
+  margin-left: 1vw;
+  position: fixed;
+  overflow: hidden;
+  background-color: #787f8d;
+  border-radius: 0.5rem;
+  z-index: 500;
+}
+
+.topnav a {
+  float: left;
+  color: var(--blank-white);
+  display: block;
+  text-align: center;
+  padding: 1.2rem 1.2rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s ease;
+}
+
+.topnav a:hover {
+  background-color: var(--horizon-blue);
+  color: var(--black-olive);
+}
+
+.topnav a.active {
+  background-color: var(--french-blue);
+  color: var(--blank-white);
+}
+
+.topnav a.book {
+  font-weight: light;
+  background-color: #0080ff;
+  color: var(--blank-white);
+}
+
+.topnav a.book:hover {
+  font-weight: light;
+  background-color: #025db7;
+  color: #cde8ff;
+}
+
+/* bottom Formatierung*/
+.bottom {
+  position: relative;
+  padding-bottom: 8rem;
+}
+
+.bottom p{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 20%;
+  font-size: 90%;
+  text-align: left;
+  position: absolute;
+}
+
+.bottom p.contact {
+  margin-left: 60%; 
+}
+
+/* Standard Formatierung */
+body {
+  background-color: var(--blank-white);
+}
+
+div {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+}
+
+p {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+}
+
+/* Logo Formatierung */
+.book {
+  padding-top: 10vw;
+  background-color: var(--light-horizon-blue);
+}
+
+.book h1.ctatext {
+  padding-top: 4vh;
+  background-color: var(--horizon-blue);
+  font-size: 6.5vw;
+  font-weight: bolder;
+  padding-bottom: 2%;
+}
+
+.book p.phone {
+  background-color: var(--horizon-blue);
+  font-size: 2.5vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.book p.mail {
+  background-color: var(--horizon-blue);
+  font-size: 2.5vw;
+  padding-top: 1vh;
+  padding-bottom: 6vh;
+}
+
+.book h2 {
+  font-size: 4.5vw;
+  padding-top: 4vh;
+  padding-bottom: 6vh;
+}
+
+/* CTA-Button Formatierung */
+.customerservice-cta {
+  padding-top: 5rem;
+  background-color: var(--light-horizon-blue);
+  padding-bottom: 10rem;
+}
+
+.customerservice-cta a.customerservice {
+  background-color: var(--french-blue);
+  color: var(--blank-white);
+  border-radius: 0.3rem;
+  padding: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  font-size: 3vw;
+  transition: 0.3s ease;
+}
+
+.customerservice-cta .customerservice:hover {
+  background-color: var(--horizon-blue);
+  color: var(--goshawk-black);
+}
+

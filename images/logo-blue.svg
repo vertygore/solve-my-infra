@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="3250"
+   height="1000"
+   viewBox="0 0 859.8958 264.58333"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="logo-blue.svg"
+   inkscape:export-filename="/Users/angelowalburger/Desktop/logo-light-blue.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="0.1733417"
+     inkscape:cx="1341.2814"
+     inkscape:cy="778.80856"
+     inkscape:window-width="1472"
+     inkscape:window-height="813"
+     inkscape:window-x="0"
+     inkscape:window-y="37"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1" />
+  <g
+     id="layer2"
+     style="display:inline;fill:#ffffff"
+     transform="matrix(1.575909,0,0,0.48664543,19.162676,5.4412686)"
+     sodipodi:insensitive="true">
+    <rect
+       style="fill:#ffffff;stroke-width:0.264583"
+       id="rect1"
+       width="545.9751"
+       height="544.11798"
+       x="-12.070878"
+       y="-10.21382"
+       ry="0" />
+  </g>
+  <g
+     id="layer1"
+     style="fill:#82bfe9;fill-opacity:1"
+     transform="translate(-22.225008,-130.175)">
+    <path
+       style="fill:#82bfe9;fill-opacity:1;fill-rule:nonzero;stroke-width:0.352887"
+       d="m 99.141028,140 c 0,0 -8.301562,53.57143 -18.678567,71.42858 -10.37699,17.85715 -43.58329,35.71428 -43.58329,35.71428 H 161.40294 c 0,0 -33.20631,11.90479 -43.58331,35.71428 C 107.44263,306.66665 99.141028,390 99.141028,390"
+       id="path2" />
+    <text
+       xml:space="preserve"
+       style="font-size:86.6612px;line-height:0;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#82bfe9;fill-opacity:1;fill-rule:nonzero;stroke-width:0.761841"
+       x="171.28387"
+       y="293.54373"
+       id="text3"><tspan
+         id="tspan3"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:86.6612px;line-height:0;font-family:Raleway;-inkscape-font-specification:'Raleway Bold';fill:#82bfe9;fill-opacity:1;stroke-width:0.761841"
+         x="171.28387"
+         y="293.54373">SolveMyInfra UG</tspan></text>
+    <path
+       style="fill:#82bfe9;fill-opacity:1;stroke:none;stroke-width:1.84638;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 42.379531,251.05416 85.190396,265.44477 95.73687,361.49333 76.71282,275.52326 Z"
+       id="path1" />
+    <path
+       style="fill:#82bfe9;fill-opacity:1;stroke:none;stroke-width:1.56526;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 151.04236,241.75619 -38.10323,-11.62001 -9.38675,-77.55634 16.9321,69.41827 z"
+       id="path1-3" />
+  </g>
+</svg>

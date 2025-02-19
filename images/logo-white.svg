@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1999.9999"
+   height="2000.0001"
+   viewBox="0 0 529.16662 529.16669"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer2"
+     style="display:none;fill:#ffffff">
+    <rect
+       style="fill:#ffffff;stroke-width:0.264583"
+       id="rect1"
+       width="545.9751"
+       height="544.11798"
+       x="-12.070878"
+       y="-10.21382"
+       ry="0" />
+  </g>
+  <g
+     id="layer1"
+     style="fill:#0000ff">
+    <path
+       style="fill:#f7f7f7;fill-opacity:1;fill-rule:nonzero;stroke-width:0.352887"
+       d="m 92.261857,140 c 0,0 -8.301562,53.57143 -18.678567,71.42858 C 63.2063,229.28573 30,247.14286 30,247.14286 h 124.52373 c 0,0 -33.20631,11.90479 -43.58331,35.71428 C 100.56342,306.66665 92.261857,390 92.261857,390"
+       id="path2" />
+    <text
+       xml:space="preserve"
+       style="font-size:41.7593px;line-height:0;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#f7f7f7;fill-opacity:1;fill-rule:nonzero;stroke-width:0.367108"
+       x="166.4632"
+       y="257.91843"
+       id="text3"><tspan
+         id="tspan3"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:41.7593px;line-height:0;font-family:Raleway;-inkscape-font-specification:'Raleway Bold';fill:#f7f7f7;fill-opacity:1;stroke-width:0.367108"
+         x="166.4632"
+         y="257.91843">SolveMyInfra UG</tspan></text>
+    <path
+       style="fill:#f7f7f7;fill-opacity:1;stroke:none;stroke-width:1.84638;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 35.50036,251.05416 42.810865,14.39061 10.546474,96.04856 -19.02405,-85.97007 z"
+       id="path1" />
+    <path
+       style="fill:#f7f7f7;fill-opacity:1;stroke:none;stroke-width:1.56526;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 144.16315,241.75619 -38.10323,-11.62001 -9.386732,-77.55634 16.932082,69.41827 z"
+       id="path1-3" />
+  </g>
+</svg>
