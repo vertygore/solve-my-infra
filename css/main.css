@@ -164,7 +164,7 @@ header {
 /* Footer */
 footer {
   position: relative;
-  padding: 4rem 10%;
+  padding: 1.5rem 10%;
   background-color: #f0f0f0;
   display: flex;
   justify-content: space-between;
@@ -172,13 +172,15 @@ footer {
   font-size: 0.9rem;
 }
 
-footer div {
-  margin-bottom: 1rem;
-}
-
 /* Why Us */
 
 /* Elemente Formatierung */
+
+#whyus {
+  font-size: 2vw;
+  text-align: left;
+  background-color: var(--light-horizon-blue);
+}
 
 .skalierbar {
   position: relative;
@@ -195,22 +197,16 @@ footer div {
 }
 
 .skalierbar h1 {
-  font-size: 5vw;
   padding-left: 50vw;
   padding-right: 1rem;
   padding-top: 8.5rem;
-  background-color: var(--light-horizon-blue);
-  text-align: left;
 }
 
 .skalierbar p {
   padding-top: 5vh;
-  font-size: 2vw;
   padding-right: 1rem;
   padding-bottom: 20vh;
-  background-color: var(--light-horizon-blue);
   padding-left: 50vw;
-  text-align: left;
 }
 
 
@@ -219,22 +215,16 @@ footer div {
 }
 
 .kostensparend h1 {
-  font-size: 5vw;
   padding-left: 50vw;
   padding-right: 1rem;
   padding-top: 8.5rem;
-  background-color: var(--light-horizon-blue);
-  text-align: left;
 }
 
 .kostensparend p {
   padding-top: 5vh;
-  font-size: 2vw;
   padding-bottom: 20vh;
   padding-right: 1rem;
-  background-color: var(--light-horizon-blue);
   padding-left: 50vw;
-  text-align: left;
 }
 
 .kostensparend img {
@@ -250,49 +240,39 @@ footer div {
 
 .zuverlässig {
   position: relative;
+  background-color: var(--horizon-blue);
 }
 
 .zuverlässig h1 {
-  font-size: 5vw;
   padding-left: 5vw;
   padding-right: 1rem;
   padding-top: 8.5rem;
-  background-color: var(--horizon-blue);
-  text-align: left;
 }
 
 .zuverlässig p {
   padding-top: 5vh;
-  font-size: 2vw;
   padding-right: 1rem;
   padding-bottom: 20vh;
-  background-color: var(--horizon-blue);
   padding-left: 5vw;
-  text-align: left;
 }
 
 
 .norisk {
   position: relative;
+  background-color: var(--horizon-blue);
 }
 
 .norisk h1 {
-  font-size: 5vw;
   padding-right: 1rem;
   padding-left: 5vw;
   padding-top: 8.5rem;
-  background-color: var(--horizon-blue);
-  text-align: left;
 }
 
 .norisk p {
   padding-top: 5vh;
-  font-size: 2vw;
   padding-right: 1rem;
   padding-bottom: 20vh;
-  background-color: var(--horizon-blue);
   padding-left: 5vw;
-  text-align: left;
 }
 
 
@@ -301,22 +281,16 @@ footer div {
 }
 
 .nachhaltigkeit h1 {
-  font-size: 5vw;
   padding-left: 50vw;
   padding-top: 8.5rem;
   padding-right: 1rem;
-  background-color: var(--light-horizon-blue);
-  text-align: left;
 }
 
 .nachhaltigkeit p {
   padding-top: 5vh;
   padding-right: 1rem;
-  font-size: 2vw;
-  padding-bottom: 20vh;
-  background-color: var(--light-horizon-blue);
+  padding-bottom: 10rem;
   padding-left: 50vw;
-  text-align: left;
 }
 
 .nachhaltigkeit img {
@@ -335,11 +309,10 @@ footer div {
   text-align: center;
   padding-top: 10vw;
   background-color: var(--light-horizon-blue);
-  padding-bottom: 6rem;
+  padding-bottom: 10rem;
 }
 
 .book h1.ctatext {
-
   padding-top: 4rem;
   background-color: var(--horizon-blue);
   font-size: 3.5vw;
@@ -390,4 +363,81 @@ a.customerservice {
   background-color: var(--horizon-blue);
   color: var(--goshawk-black);
 }
+
+
+/* FAQ */
+
+/* Elemente Wrapper Formatierung */
+#faq-section {
+  max-width: 75%;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+/* Erste headline Formatierung */
+#faq-section > h1 {
+  padding-top: 15%;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 300%;
+  margin-bottom: 8%;
+}
+
+/* Elemente in Liste Formatierung */
+.accordion {
+  background-color: var(--blank-white);
+  color: var(--black-olive);
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  border: none;
+  outline: none;
+  transition: 0.4s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.accordion:hover {
+  background-color: var(--horizon-blue);
+}
+
+.faq {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 8px 0;
+}
+
+.faq a {
+  color: var(--french-blue);
+  text-decoration-color: var(--french-blue);
+}
+
+.faq .active {
+    border: none;
+}
+
+/* Aktives Feld Formatierung */
+.active {
+  background-color: var(--french-blue);
+  color: var(--blank-white);
+}
+
+/* Panel Formatierung */
+.panel {
+  padding: 0 1.5rem 2rem 1.5rem;
+  background-color: white;
+  overflow: hidden;
+  background-color: var(--blank-white);
+  display: none;
+}
+
+.panel p {
+  color: var(--black-olive);
+  font-size: 1rem;
+  line-height: 1.4;
+  padding-top: 3rem;
+}
+
 
