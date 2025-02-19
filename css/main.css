@@ -329,3 +329,65 @@ footer div {
   height: auto;
 }
 
+/* Book */
+
+.book {
+  text-align: center;
+  padding-top: 10vw;
+  background-color: var(--light-horizon-blue);
+  padding-bottom: 6rem;
+}
+
+.book h1.ctatext {
+
+  padding-top: 4rem;
+  background-color: var(--horizon-blue);
+  font-size: 3.5vw;
+  font-weight: bolder;
+  padding-bottom: 2%;
+}
+
+.book p.phone {
+  background-color: var(--horizon-blue);
+  font-size: 1.5vw;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.book p.mail {
+  background-color: var(--horizon-blue);
+  font-size: 1.5vw;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+}
+
+.book h2 {
+  font-size: 3.5vw;
+  padding-top: 5rem;
+  padding-bottom: 6vh;
+}
+
+/* CTA-Button Formatierung */
+.customerservice-cta {
+  padding-top: 5rem;
+  background-color: var(--light-horizon-blue);
+  padding-bottom: 10rem;
+}
+
+a.customerservice {
+  background-color: var(--french-blue);
+  color: var(--blank-white);
+  border-radius: 0.3rem;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-decoration: none;
+  font-size: 3vw;
+  transition: 0.3s ease;
+}
+
+.customerservice:hover {
+  background-color: var(--horizon-blue);
+  color: var(--goshawk-black);
+}
+
