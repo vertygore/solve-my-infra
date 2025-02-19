@@ -123,7 +123,8 @@ header {
 .cta-whyus {
   background-color: var(--blank-white);
   padding: 2rem 0;
-  margin-bottom: 2rem;
+  margin-bottom: 8rem;
+  margin-top: 8rem;
 }
 
 .cta-whyus .container {
@@ -140,7 +141,7 @@ header {
 .sub-text {
   font-size: 3vw;
   margin-top: 1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 5.5rem;
 }
 
 #bookbtn {
