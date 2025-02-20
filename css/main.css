@@ -85,7 +85,7 @@ footer {
   padding: 0.5rem;
   background-color: #f0f0f0;
   color: black;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   text-decoration: none;
 }
 
@@ -218,7 +218,6 @@ footer {
   padding-left: 50vw;
 }
 
-
 .kostensparend {
   position: relative;
 }
@@ -246,7 +245,6 @@ footer {
   height: auto;
 }
 
-
 .zuverlässig {
   position: relative;
   background-color: var(--horizon-blue);
@@ -265,7 +263,6 @@ footer {
   padding-left: 5vw;
 }
 
-
 .norisk {
   position: relative;
   background-color: var(--horizon-blue);
@@ -283,7 +280,6 @@ footer {
   padding-bottom: 20vh;
   padding-left: 5vw;
 }
-
 
 .nachhaltigkeit {
   position: relative;
@@ -373,14 +369,17 @@ a.customerservice {
   color: var(--goshawk-black);
 }
 
-
 /* FAQ */
 
 /* Elemente Wrapper Formatierung */
+.faqformat {
+  background-color: #e7e7e7;
+}
+
 #faq-section {
   max-width: 75%;
   margin: auto;
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
 }
 
 /* Erste headline Formatierung */
@@ -389,7 +388,7 @@ a.customerservice {
   text-align: center;
   letter-spacing: 2px;
   font-size: 300%;
-  margin-bottom: 8%;
+  padding-bottom: 8%;
 }
 
 /* Elemente in Liste Formatierung */
@@ -424,7 +423,7 @@ a.customerservice {
 }
 
 .faq .active {
-    border: none;
+  border: none;
 }
 
 /* Aktives Feld Formatierung */
@@ -436,7 +435,6 @@ a.customerservice {
 /* Panel Formatierung */
 .panel {
   padding: 0 1.5rem 2rem 1.5rem;
-  background-color: white;
   overflow: hidden;
   background-color: var(--blank-white);
   display: none;
@@ -446,20 +444,56 @@ a.customerservice {
   color: var(--black-olive);
   font-size: 1rem;
   line-height: 1.4;
-  padding-top: 3rem;
+  margin-top: 3rem;
 }
 
 /* Ratings */
 
 .ratings {
-  color: var(--french-blue);
-  font-size: 5rem;
   text-align: center;
+  background-color: var(--blank-white);
+}
+
+.ratings h1 {
+  font-size: 5rem;
+}
+
+.ratings img {
+  margin: 1.5rem;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+}
+
+.ratings h1 {
+  font-weight: bold;
+  color: var(--goshawk-black);
+  padding-top: 6rem;
+  margin-bottom: 3rem;
 }
 
 .rating-text {
-  font-size: 2.5rem;
+  margin: 0.5rem;
+  font-size: 2rem;
+  margin-left: 15vw;
+  margin-right: 15vw;
   color: var(--goshawk-black);
 }
 
+.rating-text strong {
+  color: var(--french-blue);
+}
+
+.rating-who {
+  font-size: 1rem;
+  margin: 1.4rem;
+  color: var(--black-olive);
+}
+
+.ratings .fa.fa-star {
+  letter-spacing: 1rem;
+  color: var(--french-blue);
+  font-size: 4.5rem;
+  padding-bottom: 4rem;
+}
 
