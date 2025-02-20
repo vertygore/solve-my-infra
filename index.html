@@ -114,10 +114,12 @@
             <div class="rating-text">
               "Wir haben unser Start-up innerhalb eines Jahres stark vergrößert
               und brauchten eine skalierbare IT-Lösung. SolveMyInfra UG hat uns
-              nicht nur <strong>schnell und zuverlässig</strong> geholfen, sondern auch eine
-              <strong>kostensparende und zukunftssichere Infrastruktur</strong> geschaffen. Die
-              persönliche Betreuung und die schnelle Reaktionszeit waren absolut
-              überzeugend! <strong>Absolute Empfehlung.</strong>"
+              nicht nur <strong>schnell und zuverlässig</strong> geholfen,
+              sondern auch eine
+              <strong>kostensparende und zukunftssichere Infrastruktur</strong>
+              geschaffen. Die persönliche Betreuung und die schnelle
+              Reaktionszeit waren absolut überzeugend!
+              <strong>Absolute Empfehlung.</strong>"
             </div>
             <div class="rating-who">
               — Markus L., Geschäftsführer eines Tech-Start-ups
@@ -132,11 +134,15 @@
             <img src="images/r2.jpg" alt="Rezension 2" />
             <div class="rating-text">
               "Unsere Firma benötigte dringend eine Modernisierung der
-              IT-Infrastruktur, und <strong>SolveMyInfra UG hat das in Rekordzeit
-              umgesetzt.</strong> Innerhalb von 24 Stunden hatten wir eine erste
-              Einschätzung, und wenige Tage später lief alles perfekt. Besonders
-              beeindruckt hat uns das <strong>faire Preis-Leistungs-Verhältnis – ohne
-              versteckte Kosten oder Qualitätseinbußen.</strong>"
+              IT-Infrastruktur, und
+              <strong>SolveMyInfra UG hat das in Rekordzeit umgesetzt.</strong>
+              Innerhalb von 24 Stunden hatten wir eine erste Einschätzung, und
+              wenige Tage später lief alles perfekt. Besonders beeindruckt hat
+              uns das
+              <strong
+                >faire Preis-Leistungs-Verhältnis – ohne versteckte Kosten oder
+                Qualitätseinbußen.</strong
+              >"
             </div>
             <div class="rating-who">
               — Sarah K., IT-Managerin eines mittelständischen Unternehmens
@@ -151,14 +157,18 @@
             <img src="images/r3.jpg" alt="Rezension 3" />
             <div class="rating-text">
               "Wir haben großen Wert auf Nachhaltigkeit gelegt und waren
-              begeistert, dass SolveMyInfra UG auch hier überzeugt. <strong>Langlebige
-              Hardware und der Regenwaldschutz als Bonus</strong> – das passt perfekt zu
-              unserer Unternehmensphilosophie. Dazu kommt der unschlagbare
-              Service: <strong>Wir hatten immer einen Ansprechpartner</strong>, und das sogar
-              nach Abschluss des Projekts. Klare Empfehlung!"
+              begeistert, dass SolveMyInfra UG auch hier überzeugt.
+              <strong
+                >Langlebige Hardware und der Regenwaldschutz als Bonus</strong
+              >
+              – das passt perfekt zu unserer Unternehmensphilosophie. Dazu kommt
+              der unschlagbare Service:
+              <strong>Wir hatten immer einen Ansprechpartner</strong>, und das
+              sogar nach Abschluss des Projekts. Klare Empfehlung!"
             </div>
             <div class="rating-who">
-              — Daniel W., Projektleiter in einem Unternehmen für erneuerbare Energien
+              — Daniel W., Projektleiter in einem Unternehmen für erneuerbare
+              Energien
             </div>
             <div class="fa fa-star"></div>
             <div class="fa fa-star"></div>
@@ -238,7 +248,30 @@
           <p class="phone">Tel.: 0611 - 31 52 10</p>
           <p class="mail">E-Mail: service@solvemyinfra.de</p>
           <h2 class="ctatext">Oder über unser Kundenportal!</h2>
-          <a class="customerservice" href="">Anfrage senden</a>
+          <button class="customerservice" onclick="openForm()">
+            Anfrage senden
+          </button>
+          <div class="formcontainer">
+            <div class="form-wrapper">
+              <form class="form">
+                <label for="fullname">Vor- und Nachname ( ! )</label><br />
+                <input type="text" id="fullname" name="fullname" required /><br />
+
+                <label for="message">Nachricht ( ! )</label><br />
+                <input type="text" id="message" name="message" required /><br />
+
+                <label for="email">E-Mail ( ! )</label><br />
+                <input type="text" id="email" name="email" required /><br />
+
+                <label for="phone">Telefonnummer (optional)</label><br />
+                <input type="text" id="phone" name="phone" /><br />
+
+                <label for="specials">Sonstiges (optional)</label><br />
+                <input type="text" id="specials" name="specials" /><br />
+              </form>
+              <button class="closeForm" onclick="closeForm()">OK</button>
+            </div>
+          </div>
         </div>
       </section>
     </main>

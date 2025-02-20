@@ -3,6 +3,7 @@
 /* Farbschemata */
 :root {
   --blank-white: #f7f7f7;
+  --slight-grey: #e7e7e7;
   --horizon-blue: #82bfe9;
   --light-horizon-blue: #abd9f7;
   --black-olive: #13171b;
@@ -352,10 +353,12 @@ footer {
   padding-bottom: 10rem;
 }
 
-a.customerservice {
+button.customerservice {
+  font-family: "Raleway", sans-serif;
+  border: none;
   background-color: var(--french-blue);
   color: var(--blank-white);
-  border-radius: 0.3rem;
+  border-radius: 1rem;
   padding: 20px;
   padding-left: 30px;
   padding-right: 30px;
@@ -373,7 +376,7 @@ a.customerservice {
 
 /* Elemente Wrapper Formatierung */
 .faqformat {
-  background-color: #e7e7e7;
+  background-color: var(--slight-grey);
 }
 
 #faq-section {
@@ -497,3 +500,58 @@ a.customerservice {
   padding-bottom: 4rem;
 }
 
+/* Kundenportal Formatierung */
+
+.formcontainer {
+  color: var(--blank-white);
+  display: flex;
+  justify-content: center;     /* Centers the form horizontally */
+  align-items: center;         /* Centers the form vertically */
+  height: 100vh;               /* Take full viewport height */
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;      /* Aligns the form and button vertically */
+  justify-content: center; 
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--french-blue);  /* Optional background */
+}
+
+.formcontainer label {
+  font-size: 1rem;
+}
+
+.formcontainer input {
+  padding: 0.25rem;
+  padding-right: 6rem;
+  border-radius: 0.5rem;
+  border: none;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.formcontainer #message {
+  padding-right: 6rem;
+  padding-bottom: 5rem;
+}
+
+.closeForm {
+  text-align: center;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--blank-white);
+  transition: 0.3s ease;
+}
+
+.closeForm:hover {
+  background-color: var(--horizon-blue);
+}
+
+.closeForm:active {
+  transition: 0.1s ease;
+  background-color: var(--light-horizon-blue);
+  transform: scale(0.9);
+}
