@@ -145,7 +145,7 @@
               >"
             </div>
             <div class="rating-who">
-              — Sarah K., IT-Managerin eines mittelständischen Unternehmens
+              — Sarah F., IT-Managerin eines mittelständischen Unternehmens
             </div>
             <div class="fa fa-star"></div>
             <div class="fa fa-star"></div>
@@ -167,7 +167,7 @@
               sogar nach Abschluss des Projekts. Klare Empfehlung!"
             </div>
             <div class="rating-who">
-              — Daniel W., Projektleiter in einem Unternehmen für erneuerbare
+              — Daniel K., Projektleiter in einem Unternehmen für erneuerbare
               Energien
             </div>
             <div class="fa fa-star"></div>
@@ -251,16 +251,17 @@
           <button class="customerservice" onclick="openForm()">
             Anfrage senden
           </button>
-          <div class="formcontainer">
+          <div class="formcontainer" id="formcontainerid">
             <div class="form-wrapper">
+              <h1>Kundenportal</h1>
               <form class="form">
-                <label for="fullname">Vor- und Nachname ( ! )</label><br />
+                <label for="fullname">Vor- und Nachname *</label><br />
                 <input type="text" id="fullname" name="fullname" required /><br />
 
-                <label for="message">Nachricht ( ! )</label><br />
-                <input type="text" id="message" name="message" required /><br />
+                <label for="message">Nachricht *</label><br />
+                <textarea id="message" name="message" required></textarea><br />
 
-                <label for="email">E-Mail ( ! )</label><br />
+                <label for="email">E-Mail *</label><br />
                 <input type="text" id="email" name="email" required /><br />
 
                 <label for="phone">Telefonnummer (optional)</label><br />
@@ -278,7 +279,7 @@
 
     <footer id="bottom">
       <div class="impressum">
-        <strong>Impressum:</strong><br />
+        <strong><a class="impressum" href="/html/impressum.html">Impressum:</a></strong><br />
         Balthasar-Neumann-Str. 1<br />
         65189 Wiesbaden<br />
         SolveMyInfra UG

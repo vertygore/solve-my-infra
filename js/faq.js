@@ -16,6 +16,21 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-function openForm(){
-  
+var form = document.getElementsByClassName("formcontainer")[0];
+var book = document.getElementById("book");
+
+function openForm() {
+  if (form) {
+    form.classList.add("active");
+    setTimeout(() => {
+      form.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 400);
+  }
+}
+
+function closeForm() {
+  if (form && book) {
+    book.scrollIntoView({ behavior: "smooth", block: "center" });
+    form.classList.remove("active");
+  }
 }
