@@ -262,20 +262,21 @@
                 <input type="hidden" name="_next" value="https://vertygore.github.io/solve-my-infra/html/success.html">
 
                 <label for="fullname">Vor- und Nachname *</label><br />
-                <input type="text" id="fullname" name="Vor-&nbsp;und&nbsp;Nachname" required /><br />
+                <input type="text" id="fullname" name="Vor-&nbsp;und&nbsp;Nachname" placeholder="Max Mustermann" required /><br />
 
                 <label for="message">Nachricht *</label><br />
-                <textarea id="message" name="Nachricht" required></textarea><br />
+                <textarea id="message" name="Nachricht" placeholder="Ihre Nachricht" required></textarea><br />
 
                 <label for="email">E-Mail *</label><br />
-                <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" name="E-Mail" required /><br />
+                <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" name="E-Mail" placeholder="max.mustermann@mail.com" required /><br />
 
                 <label for="phone">Telefonnummer (optional)</label><br />
-                <input type="text" pattern="/^\+?[1-9][0-9]{7,14}$/" id="phone" name="Telefonnummer" /><br />
+                <input type="text" pattern="/^\+?[1-9][0-9]{7,14}$/" id="phone" name="Telefonnummer" placeholder="+49 123 456789 (optional)"/><br />
 
                 <label for="specials">Sonstiges (optional)</label><br />
-                <input type="text" id="specials" name="Anmerkungen" /><br />
-                <button type="submit" class="closeForm">OK</button>
+                <input type="text" id="specials" name="Anmerkungen" placeholder="Bemerkungen (optional)" /><br />
+                <button type="submit" class="closeForm">OK</button> <br/>
+                <button class="closeForm" id="exitForm" onclick="closeForm()">Schließen</button>
               </form>
             </div>
           </div>
