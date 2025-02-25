@@ -268,10 +268,10 @@
                 <textarea id="message" name="Nachricht" required></textarea><br />
 
                 <label for="email">E-Mail *</label><br />
-                <input type="text" id="email" name="E-Mail" required /><br />
+                <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" name="E-Mail" required /><br />
 
                 <label for="phone">Telefonnummer (optional)</label><br />
-                <input type="text" id="phone" name="Telefonnummer" /><br />
+                <input type="text" pattern="/^\+?[1-9][0-9]{7,14}$/" id="phone" name="Telefonnummer" /><br />
 
                 <label for="specials">Sonstiges (optional)</label><br />
                 <input type="text" id="specials" name="Anmerkungen" /><br />

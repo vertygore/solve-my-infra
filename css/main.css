@@ -626,3 +626,45 @@ button.customerservice {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
+/* Success-Page */
+
+.success {
+  background-color: var(--french-blue);
+  color: var(--blank-white);
+  text-align: center;
+  font-size: 1.3rem;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
+
+.success h1 {
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  padding: 2rem 0rem 2rem 0rem;
+}
+
+.success p {
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-bottom: 2.5rem
+}
+
+.returnBtn {
+  background-color: var(--blank-white);
+  color: var(--goshawk-black);
+  padding: 1rem 3rem 1rem 3rem;
+  border-radius: 1rem;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.returnBtn:hover {
+  background-color: var(--light-horizon-blue);
+  font-size: 1.8rem;
+}
+
+.returnBtn:active {
+  font-size: 1rem;
+}
