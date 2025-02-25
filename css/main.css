@@ -634,8 +634,8 @@ button.customerservice {
   color: var(--blank-white);
   text-align: center;
   font-size: 1.3rem;
-  padding-top: 4rem;
-  padding-bottom: 5rem;
+  padding-top: 30vh;
+  padding-bottom: 30vh;
 }
 
 .success h1 {
@@ -647,7 +647,7 @@ button.customerservice {
 .success p {
   margin-left: 20vw;
   margin-right: 20vw;
-  margin-bottom: 2.5rem
+  margin-bottom: 4rem;
 }
 
 .returnBtn {
