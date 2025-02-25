@@ -616,6 +616,15 @@ button.customerservice {
   margin-bottom: 4rem;
   background-color: var(--goshawk-black);
   color: var(--blank-white);
+  transition: 0.3s ease;
+}
+
+#exitForm:hover {
+  transform: scale(0.8);
+}
+
+#exitForm:active {
+  transform: scale(0.6);
 }
 
 /* Impressum Formatierung */
