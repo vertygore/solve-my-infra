@@ -148,10 +148,16 @@ footer {
 
 /* Call-to-Action */
 .cta-whyus {
-  background-color: var(--blank-white);
+  background-color: var(--light-horizon-blue);
   padding: 2rem 0;
-  margin-bottom: 12rem;
-  padding-top: 18rem;
+  padding-bottom: 12rem;
+  padding-top: 14rem;
+}
+
+#ctaname {
+  font-size: 10rem;
+  font-weight: bold;
+  color: var(--goshawk-black);
 }
 
 .cta-whyus .container {
@@ -832,6 +838,9 @@ button.customerservice {
   }
 
   /* Book */
+  #ctaname {
+    font-size: 3.5rem;
+  }
 
   .book h1.ctatext {
     font-size: 2rem;
