@@ -553,7 +553,7 @@ button.customerservice {
 
 .formcontainer textarea {
   width: 100%;
-  height: 15rem; 
+  height: 15rem;
   font-size: 1.4rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -573,8 +573,9 @@ button.customerservice {
   margin-bottom: 1rem;
 }
 
-.formcontainer input::placeholder, .formcontainer textarea::placeholder {
-  font-family: 'Raleway', sans-serif;
+.formcontainer input::placeholder,
+.formcontainer textarea::placeholder {
+  font-family: "Raleway", sans-serif;
   font-size: 1.1rem;
   color: var(--goshawk-black);
   opacity: 0.5;
@@ -651,7 +652,11 @@ button.customerservice {
   font-size: 2rem;
 }
 
-.datenschutz p, .datenschutz h1, .datenschutz h2, .datenschutz h3, .datenschutz h4 {
+.datenschutz p,
+.datenschutz h1,
+.datenschutz h2,
+.datenschutz h3,
+.datenschutz h4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -696,4 +701,306 @@ button.customerservice {
 
 .returnBtn:active {
   font-size: 1rem;
+}
+
+/* Mobile */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  * {
+  }
+
+  .burgerBtn {
+    font-family: "Raleway", sans-serif;
+    position: fixed;
+    z-index: 1000;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+    margin: 0.3rem;
+    font-size: 1rem;
+    background-color: var(--french-blue);
+    color: var(--blank-white);
+  }
+
+  .burgerBtn.active {
+    display: none;
+  }
+
+  #closeMenu {
+    position: relative;
+    border: none;
+  }
+
+  .topnav {
+    margin: 0.3rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 500;
+  }
+
+  .topnav.active {
+    display: flex;
+  }
+
+  .topnav a {
+    padding: 0.7rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    background: lightgray;
+    width: 100%;
+  }
+
+  .topnav a:hover {
+    background-color: var(--horizon-blue);
+    color: var(--black-olive);
+  }
+
+  .topnav a.active {
+    background-color: var(--french-blue);
+    color: var(--blank-white);
+  }
+
+  .topnav a.book {
+    font-weight: 300;
+    background-color: #0080ff;
+    color: var(--blank-white);
+  }
+
+  .topnav a.book:hover {
+    background-color: #025db7;
+    color: #cde8ff;
+  }
+
+  /* Ratings */
+
+  .ratings h1 {
+    font-size: 1.7rem;
+  }
+
+  .ratings {
+    text-align: center;
+    background-color: var(--blank-white);
+  }
+
+  .ratings img {
+    margin: 1.5rem;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+  }
+
+  .ratings h1 {
+    font-weight: bold;
+    color: var(--goshawk-black);
+    padding-top: 6rem;
+    margin-bottom: 3rem;
+  }
+
+  .rating-text {
+    margin: 0.5rem;
+    font-size: 1rem;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    color: var(--goshawk-black);
+  }
+
+  .rating-text strong {
+    color: var(--french-blue);
+  }
+
+  .rating-who {
+    font-size: 1rem;
+    margin: 1.4rem;
+    color: var(--black-olive);
+  }
+
+  .ratings .fa.fa-star {
+    letter-spacing: 0.5rem;
+    color: var(--french-blue);
+    font-size: 2.5rem;
+    padding-bottom: 4rem;
+  }
+
+  /* Book */
+
+  .book h1.ctatext {
+    font-size: 2.5rem;
+  }
+
+  .book p.phone {
+    font-size: 1.5rem;
+  }
+
+  .book p.mail {
+    font-size: 1.5rem;
+  }
+
+  .book h2 {
+    font-size: 1.5rem;
+  }
+
+  /* CTA-Button Formatierung */
+
+  button.customerservice {
+    font-size: 5.5vw;
+  }
+
+  /* Why Us */
+
+  /* Elemente Formatierung */
+
+  #whyus {
+    font-size: 2vw;
+    background-color: var(--light-horizon-blue);
+  }
+
+  .arguments {
+    text-align: center;
+    position: relative; /* So the absolute image is positioned relative to this container */
+  }
+
+  .arguments img {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    max-width: 100%;
+    border-radius: 0px;
+    height: auto;
+  }
+
+  .arguments h1 {
+    font-size: 2rem;
+    padding-left: 5vw;
+    text-align: center;
+    padding-top: 16.5rem;
+  }
+
+  .arguments p {
+    padding-left: 5vw;
+    font-size: 0.8rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .zuverlässig h1,
+  .norisk h1 {
+    padding-top: 5rem;
+  }
+
+  .nachhaltigkeit h1 {
+  }
+
+  /* Call-to-Action */
+  .cta-whyus {
+    margin-bottom: 12rem;
+    margin-top: 12rem;
+  }
+
+  .main-text {
+    font-size: 2rem;
+  }
+
+  .sub-text {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+  }
+
+  #bookbtn {
+    padding: 1.3rem 2rem;
+    font-size: 1.6rem;
+  }
+
+  /* Banner und Logo */
+  .banner {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .banner img {
+    object-fit: fill;
+    width: 250%;
+    display: flex;
+  }
+
+  .logo {
+    position: absolute;
+    top: 2% !important;
+    right: 2% !important;
+    z-index: 10;
+    margin-left: 75vw;
+  }
+
+  .logo img {
+    max-width: 50vw;
+    margin-right: 10rem;
+    background: transparent;
+  }
+
+  .greeting {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: var(--blank-white);
+    text-shadow: 0.1rem 0.3rem #787f8d;
+    pointer-events: none;
+  }
+
+  .greeting1 {
+    font-weight: bold;
+    font-size: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-text-stroke: 0.1rem var(--blank-white);
+  }
+
+  .greeting2 {
+    font-weight: bolder;
+    font-size: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 0.1rem 0.3rem var(--french-blue);
+  }
+
+  /* FAQ */
+  #faq-section > h1 {
+    font-size: 150%;
+  }
+
+  .accordion {
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  footer {
+    position: relative;
+    padding: 1.5rem 10%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+  }
+
+  .impressum , .contact{
+    font-size: 0.8rem;
+  }
+
+  .contact {
+    margin-top: 2rem;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  * {
+    background-color: yellow;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  * {
+  }
 }

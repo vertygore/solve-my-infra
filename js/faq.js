@@ -34,3 +34,13 @@ function closeForm() {
     form.classList.remove("active");
   }
 }
+
+var topnav = document.getElementsByClassName("topnav")[0];
+var burgerBtn = document.getElementsByClassName("burgerBtn")[0];
+
+function toggleBurger() {
+  if (topnav) {
+    topnav.classList.toggle("active");
+    burgerBtn.classList.toggle("active");
+  }
+}

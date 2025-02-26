@@ -15,13 +15,17 @@
 
   <body>
     <header>
+      <button class="burgerBtn" onclick="toggleBurger()">Menü</button>
       <div class="topnav">
-        <a class="active" href="index.html">Start</a>
-        <a href="#whyus">Warum wir?</a>
-        <a href="#customer">Rezensionen</a>
-        <a href="#faq-section">Fragen?</a>
-        <a class="book" href="#book">Buchen!</a>
-        <a href="#customer">Downloads</a>
+        <a id="topnav1" class="active" href="index.html">Start</a>
+        <a id="topnav2" href="#whyus">Warum wir?</a>
+        <a id="topnav3" href="#customer">Rezensionen</a>
+        <a id="topnav4" href="#faq-section">Fragen?</a>
+        <a id="topnav5" class="book" href="#book">Buchen!</a>
+        <a id="topnav6" href="#customer">Downloads</a>
+        <button id="closeMenu" class="burgerBtn" onclick="toggleBurger()">
+          Schließen
+        </button>
       </div>
     </header>
 
@@ -245,7 +249,7 @@
       <section id="book">
         <div class="book">
           <h1 class="ctatext">Frag uns an!</h1>
-          <p class="phone">Tel.: 0611 - 31 52 10</p>
+          <p class="phone">Tel.: 0000 - 00 00 00</p>
           <p class="mail">E-Mail: service@solvemyinfra.de</p>
           <h2 class="ctatext">Oder über unser Kundenportal!</h2>
           <button class="customerservice" onclick="openForm()">
@@ -254,29 +258,69 @@
           <div class="formcontainer" id="formcontainerid">
             <div class="form-wrapper">
               <h1>Kundenportal</h1>
-              <form class="form" action="https://formsubmit.co/148b1c4bbc300d8211cca4b522dd1e68" method="POST">
-                <input type="text" name="_honey" style="display: none;">
+              <form
+                class="form"
+                action="https://formsubmit.co/148b1c4bbc300d8211cca4b522dd1e68"
+                method="POST"
+              >
+                <input type="text" name="_honey" style="display: none" />
 
-                <input type="hidden" name="_captcha" value="false">
-                
-                <input type="hidden" name="_next" value="https://vertygore.github.io/solve-my-infra/html/success.html">
+                <input type="hidden" name="_captcha" value="false" />
+
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://vertygore.github.io/solve-my-infra/html/success.html"
+                />
 
                 <label for="fullname">Vor- und Nachname *</label><br />
-                <input type="text" id="fullname" name="Vor-&nbsp;und&nbsp;Nachname" placeholder="Max Mustermann" required /><br />
+                <input
+                  type="text"
+                  id="fullname"
+                  name="Vor-&nbsp;und&nbsp;Nachname"
+                  placeholder="Max Mustermann"
+                  required
+                /><br />
 
                 <label for="message">Nachricht *</label><br />
-                <textarea id="message" name="Nachricht" placeholder="Ihre Nachricht" required></textarea><br />
+                <textarea
+                  id="message"
+                  name="Nachricht"
+                  placeholder="Ihre Nachricht"
+                  required
+                ></textarea
+                ><br />
 
                 <label for="email">E-Mail *</label><br />
-                <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" name="E-Mail" placeholder="max.mustermann@mail.com" required /><br />
+                <input
+                  type="text"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  id="email"
+                  name="E-Mail"
+                  placeholder="max.mustermann@mail.com"
+                  required
+                /><br />
 
                 <label for="phone">Telefonnummer (optional)</label><br />
-                <input type="text" pattern="/^\+?[1-9][0-9]{7,14}$/" id="phone" name="Telefonnummer" placeholder="+49 123 456789 (optional)"/><br />
+                <input
+                  type="text"
+                  pattern="/^\+?[1-9][0-9]{7,14}$/"
+                  id="phone"
+                  name="Telefonnummer"
+                  placeholder="+49 123 456789 (optional)"
+                /><br />
 
                 <label for="specials">Sonstiges (optional)</label><br />
-                <input type="text" id="specials" name="Anmerkungen" placeholder="Bemerkungen (optional)" /><br />
-                <button type="submit" class="closeForm">OK</button> <br/>
-                <button class="closeForm" id="exitForm" onclick="closeForm()">Schließen</button>
+                <input
+                  type="text"
+                  id="specials"
+                  name="Anmerkungen"
+                  placeholder="Bemerkungen (optional)"
+                /><br />
+                <button type="submit" class="closeForm">OK</button> <br />
+                <button class="closeForm" id="exitForm" onclick="closeForm()">
+                  Schließen
+                </button>
               </form>
             </div>
           </div>
@@ -286,7 +330,9 @@
 
     <footer id="bottom">
       <div class="impressum">
-        <strong><a class="impressum" href="html/impressum.html">Impressum:</a></strong><br />
+        <a class="impressum" href="html/impressum.html"
+          ><strong>Impressum:</strong></a
+        ><br />
         Balthasar-Neumann-Str. 1<br />
         65189 Wiesbaden<br />
         SolveMyInfra UG
