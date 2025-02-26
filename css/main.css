@@ -614,7 +614,7 @@ button.customerservice {
   padding-left: 1rem;
   padding-right: 1rem;
   font-weight: normal;
-  margin-top: -0.05rem;
+  margin-top: 1rem;
   margin-bottom: 4rem;
   background-color: var(--goshawk-black);
   color: var(--blank-white);
