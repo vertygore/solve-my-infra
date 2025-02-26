@@ -30,7 +30,6 @@ function openForm() {
 
 function closeForm() {
   if (form && book) {
-    book.scrollIntoView({ behavior: "smooth", block: "center" });
     form.classList.remove("active");
   }
 }

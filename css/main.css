@@ -526,7 +526,7 @@ button.customerservice {
   transition: 0.4s ease;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 60rem;
   color: var(--blank-white);
   opacity: 0;
   transform: scale(0);
