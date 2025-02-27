@@ -177,26 +177,26 @@ footer {
   margin-bottom: 5.5rem;
 }
 
-#bookbtn {
+#bookBtn {
+  font-family: "Raleway", sans-serif;
+  border: none;
   padding: 1.3rem 5rem;
   border-radius: 0.55rem;
   margin-top: 1rem;
   color: var(--blank-white);
-  text-decoration: none;
   font-size: 2rem;
   font-weight: bold;
   background-color: var(--french-blue);
-  transform: scale(1);
   transition: 0.4s ease;
 }
 
-#bookbtn:hover {
+#bookBtn:hover {
   background-color: var(--horizon-blue);
   cursor: pointer;
   transform: scale(1.1);
 }
 
-#bookbtn:active {
+#bookBtn:active {
   transform: scale(0.9);
 }
 
@@ -330,7 +330,6 @@ footer {
 /* Book */
 
 .book {
-
   text-align: center;
   padding-top: 10vw;
   background-color: var(--light-horizon-blue);
@@ -731,10 +730,80 @@ button.customerservice {
   border: none;
 }
 
+.downloadsection {
+  padding-top: 8rem;
+  background-color: var(--light-horizon-blue);
+  text-align: center;
+  padding-bottom: 0rem;
+}
+
+.downloadsection h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 0.7rem;
+}
+
+.downloadsection p {
+  font-size: 1.3rem;
+  padding-bottom: 3.5rem;
+}
+.installcontainer {
+  padding-bottom: 3.5rem;
+}
+
+.byodcontainer {
+  background-color: var(--horizon-blue);
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+.byodcontainer h1 {
+  padding-bottom: 4rem;
+}
+
+.uninstallcontainer {
+  background-color: var(--light-horizon-blue);
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+}
+
+.uninstallcontainer h1 {
+  padding-bottom: 0rem;
+  padding-bottom: 1rem;
+}
+
+.uninstallcontainer p {
+  font-size: 1.3rem;
+  padding-bottom: 3.5rem;
+}
+
+#downloadBtn{
+  text-decoration: none;
+  color: var(--blank-white);
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+  border: none;
+  background-color: var(--french-blue);
+  border-radius: 1rem;
+  transition: 0.3s ease;
+}
+
+#downloadBtn:hover {
+  font-size: 2.3rem;
+}
+
+#downloadBtn:active {
+  font-size: 1.8rem;
+  color: var(--blank-white);
+  background-color: var(--goshawk-black);
+}
+
 /* Mobile */
 @media screen and (min-width: 320px) and (max-width: 480px) {
   * {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
   }
 
   .burgerBtn.active {
@@ -899,7 +968,6 @@ button.customerservice {
 
   .nachhaltigkeit {
     padding-top: 8rem;
-
   }
 
   .kostensparend {

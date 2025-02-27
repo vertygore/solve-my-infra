@@ -28,6 +28,12 @@ function openForm() {
   }
 }
 
+function scrollToMore() {
+  if (book) {
+    book.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+}
+
 function closeForm() {
   if (form && book) {
     form.classList.remove("active");
