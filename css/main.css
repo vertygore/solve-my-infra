@@ -1215,9 +1215,10 @@ button.customerservice {
 /* Desktop */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   * {
+
   }
   
   #ctaname {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 }
