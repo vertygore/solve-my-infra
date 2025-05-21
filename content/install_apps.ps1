@@ -22,11 +22,11 @@ IF ($IsWindows) {
         Set-ExecutionPolicy Bypass -Scope Process -Force; `
             [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12; `
             iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) 
-        Start-Process cmd.exe -ArgumentList "/c `"$env:ProgramData\chocolatey\redirects\RefreshEnv.cmd`"" -WindowStyle Hidden -NoNewWindow -Wait
+        Start-Process cmd.exe -ArgumentList "/c ⁠ "$env:ProgramData\chocolatey\redirects\RefreshEnv.cmd ⁠"" -WindowStyle Hidden -NoNewWindow -Wait
 
     }
     # Lade env:Variablen neu.
-    Start-Process cmd.exe -ArgumentList "/c `"$env:ProgramData\chocolatey\redirects\RefreshEnv.cmd`"" -WindowStyle Hidden -NoNewWindow -Wait
+    Start-Process cmd.exe -ArgumentList "/c ⁠ "$env:ProgramData\chocolatey\redirects\RefreshEnv.cmd ⁠"" -WindowStyle Hidden -NoNewWindow -Wait
 
     # Installiere Programme falls noch nicht installiert
     foreach ($package in $packages) {
@@ -76,33 +76,53 @@ elseif ($IsLinux) {
         "npm",
         "arduino",
         "mysql-workbench",
-        "code"  # VSCode
+        "code"
     )
-    
-    # Install basic requirements for the system / update it to the newest compatible version
-    sudo apt update; sudo apt full-upgrade -y
 
-    # Ensure basic tools are available
+    sudo apt update
+    sudo apt full-upgrade -y
     sudo apt install -y software-properties-common apt-transport-https wget curl gnupg2
 
-    # Add the Microsoft GPG Key and repo for VS Code if not already present
-    #GPG: GNU Privacy Guard is responsible for authentification of the received packages
-    if (-not (Test-Path /etc/apt/sources.list.d/vscode.list)) {
-        curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
-        echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+    if (-not (Test-Path "/etc/apt/sources.list.d/vscode.list")) {
+        curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > $null
+        "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list > $null
         sudo apt update
     }
 
-    # Install Node-RED if not present
-    #-z checks if string is empty, which returns an empty string if node-red isnt installed
-    if (-z $(which node-red)) {
+    if (-not (Get-Command node-red -ErrorAction SilentlyContinue)) {
         sudo npm install -g --unsafe-perm node-red
     }
 
-    # Install packages
-    sudo apt install -y $lpackages
+    foreach ($pkg in $lpackages) {
+        sudo apt install -y $pkg
+    }
 
-    # Clean up
     sudo apt autoremove -y
     sudo apt autoclean -y
+}
+elseif ($IsMacOS) {
+    # Liste der zu installierenden Programme
+    $mpackages = @(
+        "wireshark",
+        "virtualbox",
+        "filius",
+        "docker",
+        "notepad-plus-plus",
+        "openjdk",
+        "maven",
+        "git",
+        "nodejs",
+        "arduino",
+        "mysql-workbench"
+    )
+
+    # Installiere Homebrew, falls nicht vorhanden
+    if (-not (Get-Command brew -ErrorAction SilentlyContinue)) {
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    }
+
+    # Installiere Programme
+    foreach ($pkg in $mpackages) {
+        brew install $pkg
+    }
 }
