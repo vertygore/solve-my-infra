@@ -11,7 +11,7 @@ $packages = @(
     "nodejs", # Node.js (Spätere Installation von Node-RED via npm )
     "arduino", # Arduino IDE
     "xampp", # XAMPP
-    "mysqL.workbench", # MySQL Workbench
+    "mysql.workbench", # MySQL Workbench
     "notepadplusplus"          # Notepad++
 )
 
@@ -67,7 +67,6 @@ elseif ($IsLinux) {
         "virtualbox",
         "filius",
         "snapd",
-        "notepad-plus-plus",
         "docker.io",
         "openjdk-17-jdk",
         "maven",
@@ -83,9 +82,15 @@ elseif ($IsLinux) {
     sudo apt full-upgrade -y
     sudo apt install -y software-properties-common apt-transport-https wget curl gnupg2
 
-    if (-not (Test-Path "/etc/apt/sources.list.d/vscode.list")) {
-        curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > $null
-        "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list > $null
+    $vscodeListPath = "/etc/apt/sources.list.d/vscode.list"
+    if (-not (Test-Path "/etc/apt/trusted.gpg.d")) {
+        sudo mkdir -p /etc/apt/trusted.gpg.d
+    }
+
+    if (-not (Test-Path $vscodeListPath)) {
+        curl -sSL https://packages.microsoft.com/keys/microso
+        ft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > $null
+        "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" | sudo tee $vscodeListPath > $null
         sudo apt update
     }
 
@@ -95,6 +100,14 @@ elseif ($IsLinux) {
 
     foreach ($pkg in $lpackages) {
         sudo apt install -y $pkg
+    }
+
+    # Ensure snapd is started (some distros require this)
+    sudo systemctl enable snapd
+    sudo systemctl start snapd
+
+    if (-not (Get-Command notepad-plus-plus -ErrorAction SilentlyContinue)) {
+        sudo snap install notepad-plus-plus
     }
 
     sudo apt autoremove -y
