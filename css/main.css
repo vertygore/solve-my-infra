@@ -812,6 +812,8 @@ button.customerservice {
 
   .burgerBtn {
     display: block;
+    font-size: 2rem;
+    padding: 1rem 2.5rem 1rem 2.5rem;
   }
 
   .topnav {
@@ -828,7 +830,7 @@ button.customerservice {
 
   .topnav a {
     padding: 0.7rem;
-    font-size: 1rem;
+    font-size: 1.7rem;
     text-decoration: none;
     color: black;
     background: lightgray;
@@ -1127,6 +1129,14 @@ button.customerservice {
   #exitForm {
     margin-top: 1rem;
   }
+
+  .downloadsection h1 {
+    font-size: 2.1rem;
+  }
+
+  #bookBtn {
+    padding: 2rem 3rem 2rem 3rem;
+  }
 }
 
 /* Tablets */
@@ -1141,12 +1151,13 @@ button.customerservice {
 
   .burgerBtn.active {
     display: none;
+   
   }
 
   .burgerBtn {
     display: block;
-
-    font-size: 1.3rem;
+    padding: 1rem 2.5rem 1rem 2.5rem;
+    font-size: 2rem;
   }
 
   .topnav {
@@ -1163,7 +1174,7 @@ button.customerservice {
 
   .topnav a {
     padding: 0.7rem;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     text-decoration: none;
     color: black;
     background: lightgray;
