@@ -725,6 +725,10 @@ button.customerservice {
   color: var(--blank-white);
 }
 
+#impressumBurgerBtn {
+    background-color: var(--horizon-blue);
+  }
+
 #closeMenu {
   position: relative;
   border: none;
@@ -1137,6 +1141,8 @@ button.customerservice {
   #bookBtn {
     padding: 2rem 3rem 2rem 3rem;
   }
+
+
 }
 
 /* Tablets */
