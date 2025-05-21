@@ -1,19 +1,4 @@
-﻿# Speichere Process ID in einer Variable zur späteren Verwendung.
-$hwnd = (Get-Process -Id $PID).MainWindowHandle
-# Injiziere ein kurzes C Skript
-Add-Type @"
-    using System;
-    using System.Runtime.InteropServices;
-    public class Win32 {
-        [DllImport("user32.dll")]
-        public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
-    }
-"@
-# Führe Programm im Hintergrund aus.
-[Win32]::ShowWindow($hwnd, 0)  
-
-# Liste der zu installierenden Programme
-$packages = @(
+﻿$packages = @(
     "wireshark",               # Wireshark
     "virtualbox",              # VirtualBox
     "docker-desktop",          # Docker
@@ -35,12 +20,10 @@ IF (-not (Test-Path -Path "$env:programdata\Chocolatey")){
     Set-ExecutionPolicy Bypass -Scope Process -Force; `
     [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12; `
     iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) 
-    Start-Process cmd.exe -ArgumentList "/c `"$env:ProgramData\chocolatey\redirects\RefreshEnv.cmd`"" -WindowStyle Hidden -NoNewWindow -Wait
-
+    Invoke-Item -Path "$env:programdata\chocolatey\redirects\RefreshEnv.cmd"
 }
-# Lade env:Variablen neu.
-Start-Process cmd.exe -ArgumentList "/c `"$env:ProgramData\chocolatey\redirects\RefreshEnv.cmd`"" -WindowStyle Hidden -NoNewWindow -Wait
 
+Invoke-Item -Path "$env:programdata\chocolatey\redirects\RefreshEnv.cmd"
 # Installiere Programme falls noch nicht installiert
 foreach ($package in $packages) {
     $installed = choco list  | Select-String -Pattern $package
@@ -66,8 +49,6 @@ if (-not ($env:Path -split ';' | Where-Object { $_ -eq $vscodePath })) {
     # Aktualisieren Sie die aktuelle PowerShell-Sitzung
     $env:Path += ";$vscodePath"
 }
-# Installiere Java Extension oder hole das neueste Update
+
 $javaextensionpack = "vscjava.vscode-java-pack"
-code --install-extension $javaextensionpack --force
-# Nach Installation aufräumen.
-Get-ChildItem -Path $env:TEMP -Filter "chocolatey*" | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
+code --install-extension $javaextensionpack
