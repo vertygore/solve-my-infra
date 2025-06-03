@@ -15,18 +15,17 @@ $packages = @(
     "notepadplusplus"          # Notepad++
 )
 
-IF ($IsWindows) {
     # Falls Chocolatey nicht installiert ist, installiere Chocolatey
     IF (-not (Test-Path -Path "$env:programdata\Chocolatey")) {
         Write-Host "Installing Chocolatey..."
         Set-ExecutionPolicy Bypass -Scope Process -Force; `
             [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12; `
-            iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) 
-        Start-Process cmd.exe -ArgumentList "/c ⁠ "$env:ProgramData\chocolatey\redirects\RefreshEnv.cmd ⁠"" -WindowStyle Hidden -NoNewWindow -Wait
+            Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) 
+        Start-Process cmd.exe -ArgumentList "/c `"$env:ProgramData\chocolatey\redirects\RefreshEnv.cmd`"" -WindowStyle Hidden -NoNewWindow -Wait
 
     }
     # Lade env:Variablen neu.
-    Start-Process cmd.exe -ArgumentList "/c ⁠ "$env:ProgramData\chocolatey\redirects\RefreshEnv.cmd ⁠"" -WindowStyle Hidden -NoNewWindow -Wait
+    Start-Process cmd.exe -ArgumentList "/c `"$env:ProgramData\chocolatey\redirects\RefreshEnv.cmd`"" -NoNewWindow -Wait
 
     # Installiere Programme falls noch nicht installiert
     foreach ($package in $packages) {
@@ -57,94 +56,3 @@ IF ($IsWindows) {
     # Installiere Java Extension oder hole das neueste Update
     $javaextensionpack = "vscjava.vscode-java-pack"
     code --install-extension $javaextensionpack --force
-    # Nach Installation aufräumen.
-    Get-ChildItem -Path $env:TEMP -Filter "chocolatey*" | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
-}
-
-elseif ($IsLinux) {
-    $lpackages = @(
-        "wireshark",
-        "virtualbox",
-        "filius",
-        "snapd",
-        "docker.io",
-        "openjdk-17-jdk",
-        "maven",
-        "git",
-        "nodejs",
-        "npm",
-        "arduino",
-        "mysql-workbench",
-        "code"
-    )
-
-    sudo apt update
-    sudo apt full-upgrade -y
-    sudo apt install -y software-properties-common apt-transport-https wget curl gnupg2
-
-    $vscodeListPath = "/etc/apt/sources.list.d/vscode.list"
-    if (-not (Test-Path "/etc/apt/trusted.gpg.d")) {
-        sudo mkdir -p /etc/apt/trusted.gpg.d
-    }
-
-    if (-not (Test-Path $vscodeListPath)) {
-        curl -sSL https://packages.microsoft.com/keys/microso
-        ft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > $null
-        "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" | sudo tee $vscodeListPath > $null
-        sudo apt update
-    }
-
-    if (-not (Get-Command node-red -ErrorAction SilentlyContinue)) {
-        sudo npm install -g --unsafe-perm node-red
-    }
-
-    foreach ($pkg in $lpackages) {
-    if ($pkg -eq "virtualbox") {
-        Write-Host "Installing VirtualBox from Oracle repo..."
-        wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/oracle_vbox.gpg
-        echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/oracle_vbox.gpg] https://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
-        sudo apt update
-        sudo apt install -y virtualbox-7.0
-    } else {
-        sudo apt install -y $pkg
-    }
-}
-
-
-    # Ensure snapd is started (some distros require this)
-    sudo systemctl enable snapd
-    sudo systemctl start snapd
-
-    if (-not (Get-Command notepad-plus-plus -ErrorAction SilentlyContinue)) {
-        sudo snap install notepad-plus-plus
-    }
-
-    sudo apt autoremove -y
-    sudo apt autoclean -y
-}
-elseif ($IsMacOS) {
-    # Liste der zu installierenden Programme
-    $mpackages = @(
-        "wireshark",
-        "virtualbox",
-        "filius",
-        "docker",
-        "notepad-plus-plus",
-        "openjdk",
-        "maven",
-        "git",
-        "nodejs",
-        "arduino",
-        "mysql-workbench"
-    )
-
-    # Installiere Homebrew, falls nicht vorhanden
-    if (-not (Get-Command brew -ErrorAction SilentlyContinue)) {
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    }
-
-    # Installiere Programme
-    foreach ($pkg in $mpackages) {
-        brew install $pkg
-    }
-}
