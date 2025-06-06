@@ -90,10 +90,16 @@ if [ ! -f /etc/apt/sources.list.d/vscode.list ]; then
 fi
 
 if ! dpkg -l | grep -q virtualbox; then
-    wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/oracle_vbox.gpg > /dev/null
-    echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/oracle_vbox.gpg] https://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
-    sudo apt update
-    sudo apt install -y virtualbox-7.0
+    echo "Downloading and installing VirtualBox manually for Ubuntu 25.04..."
+
+    # Ensure required dependencies are present
+    sudo apt install -y curl wget gnupg2 linux-headers-$(uname -r) dkms
+
+    # Download latest 7.x version from Oracle (compatible with Ubuntu 22.04)
+    wget https://download.virtualbox.org/virtualbox/7.0.18/virtualbox-7.0_7.0.18-162988~Ubuntu~jammy_amd64.deb -O /tmp/virtualbox.deb
+
+    # Install it
+    sudo apt install -y /tmp/virtualbox.deb
 fi
 
 for pkg in "${packages[@]}"; do
